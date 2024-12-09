@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading...</title> <!-- Placeholder for title -->
+    <link rel="stylesheet" id="app-theme" href="assets/styles/default.css">
+    <link rel="stylesheet" href="assets/styles/manage-places.css">
+</head>
+<body>
+<div class="header">
+    <button class="toggle-sidebar-btn button" onclick="toggleSidebar()" title="View all places">≡</button>
+    <h1 id="app-name">App Name</h1> <!-- Placeholder for app name -->
+    <p id="description"></p> <!-- Placeholder for description -->
+</div>
+<input type="hidden" id="walking-speed" value="83.33">
+<div class="container">
+    <div class="sidebar" id="sidebar">
+        <button class="close-sidebar-btn button" onclick="toggleSidebar()" title="Close sidebar">X</button>
+        <div id="places"></div>
+    </div>
+    <div class="info-panel">
+        <div id="info" class="info">
+            <img src="assets/images/listen.png" alt="Listen to information about nearest place" class="listen" onclick="textToSpeech();">
+            <h2>Nearest Place</h2>
+            <div class="nearest-place">
+                <div>
+                    <p id="nearest-name"></p>
+                    <p id="nearest-distance"></p>
+                    <div id="nearest-img"></div>
+                    <p id="nearest-info"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p class="disclaimer">Walking times are estimates based on an average walking speed of 5 km/h.</p>
+</div>
+
+<script src="app.js"></script>
+<script src="places/places.js"></script>
+<script src="index.js"></script>
+</body>
+</html>

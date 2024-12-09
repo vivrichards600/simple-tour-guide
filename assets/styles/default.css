@@ -1,0 +1,136 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.header {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.container {
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+}
+
+.sidebar {
+    width: 240px;
+    position: fixed;
+    left: -100%;
+    top: 0;
+    bottom: 0;
+    background-color: #f9f9f9;
+    padding: 20px;
+    transition: left 0.3s ease-in-out;
+    max-height: 100vh; /* Make sidebar height fit screen */
+    overflow-y: auto; /* Enable scrolling when content exceeds height */
+    border-right: 1px solid #d4d4d4;
+    z-index: 5555;
+}
+
+.sidebar.open {
+    left: 0;
+}
+
+.info-panel {
+    width: 100%;
+}
+
+.toggle-sidebar-btn {
+    /*background-color: #5b615b;*/
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    float: right;
+}
+
+.close-sidebar-btn {
+    /*background-color: #5b615b;*/
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    float: right;
+}
+
+.place {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.details {
+    flex-grow: 1;
+}
+
+.distance {
+    color: #575656;
+    font-size: 14px;
+}
+
+#nearest-distance {
+    display: flex;
+    align-items: center;
+    color: #575656;
+    font-size: 14px;
+}
+
+.info {
+    display: none;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.info h2 {
+    margin-top: 0;
+}
+
+img {
+    max-height: 100px;
+}
+
+/* Arrow icon styling */
+
+.arrow {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    transform-origin: center;
+    /*animation: heartbeat 1s infinite;*/
+}
+
+img.arrow {
+    border: 1px solid #e0e0e0;
+    padding: 4px;
+    border-radius: 50%;
+    background-color: #e9f7f2;
+}
+
+/* Listen button */
+img.listen {
+    height: 30px;
+    float: right;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+img.listen:hover {
+    transform: scale(1.1);
+}
+
+.disclaimer {
+    font-size: 0.9em;
+    color: #555;
+    font-style: italic;
+    margin-top: 30px;
+    text-align: center;
+}
