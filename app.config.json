@@ -1,4 +1,5 @@
 {
   "appName": "Penllergaer",
-  "description": "Allow location access to see nearby historic sites with directions and distances."
+  "description": "Allow location access to see nearby historic sites with directions and distances.",
+  "theme": "default.css"
 }
